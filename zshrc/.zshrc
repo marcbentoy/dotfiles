@@ -1,3 +1,12 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+export TERMINAL=wezterm
+
 export PATH=/home/vince/.local/share/zinit/polaris/bin:/home/vince/.sdkman/candidates/maven/current/bin:/home/vince/.sdkman/candidates/java/current/bin:/usr/bin/flutter/bin:/home/vince/.local/bin:/home/vince/.rvm/bin:/home/vince/.gvm/pkgsets/go1.22/global/bin:/home/vince/.gvm/gos/go1.22/bin:/home/vince/.gvm/pkgsets/go1.22/global/overlay/bin:/home/vince/.gvm/bin:/usr/bin/flutter/bin:/home/vince/.cargo/bin:/home/vince/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/local/bin/zig:/home/vince/.cargo/bin:/home/vince/.fzf/bin
 
 # NVM
@@ -96,3 +105,8 @@ esac
 
 # shiori
 export PATH=$PATH:/home/vince/Downloads/shiori/
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
+[[ -s "/home/vince/.gvm/scripts/gvm" ]] && source "/home/vince/.gvm/scripts/gvm"
