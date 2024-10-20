@@ -62,7 +62,7 @@ return {
 			end
 
 			-- Disable formatting for some server
-			if client.name == "tsserver" then
+			if client.name == "ts_ls" then
 				client.server_capabilities.documentFormattingProvider = false -- 0.8 and later
 			end
 
@@ -210,7 +210,7 @@ https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.m
 			-- "pbls",
 			"pyright",
 			-- "rust_analyzer",
-			"tsserver",
+			"ts_ls",
 			"jsonls",
 			"cssls",
 			"tailwindcss",
