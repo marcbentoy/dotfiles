@@ -51,26 +51,26 @@ config.keys = {
         key = "-",
         action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
     },
-    {
-        mods = "ALT",
-        key = "h",
-        action = wezterm.action.ActivatePaneDirection("Left"),
-    },
-    {
-        mods = "ALT",
-        key = "j",
-        action = wezterm.action.ActivatePaneDirection("Down"),
-    },
-    {
-        mods = "ALT",
-        key = "k",
-        action = wezterm.action.ActivatePaneDirection("Up"),
-    },
-    {
-        mods = "ALT",
-        key = "l",
-        action = wezterm.action.ActivatePaneDirection("Right"),
-    },
+    -- {
+    --     mods = "ALT",
+    --     key = "h",
+    --     action = wezterm.action.ActivatePaneDirection("Left"),
+    -- },
+    -- {
+    --     mods = "ALT",
+    --     key = "j",
+    --     action = wezterm.action.ActivatePaneDirection("Down"),
+    -- },
+    -- {
+    --     mods = "ALT",
+    --     key = "k",
+    --     action = wezterm.action.ActivatePaneDirection("Up"),
+    -- },
+    -- {
+    --     mods = "ALT",
+    --     key = "l",
+    --     action = wezterm.action.ActivatePaneDirection("Right"),
+    -- },
     {
         mods = "ALT",
         key = "LeftArrow",
