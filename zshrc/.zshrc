@@ -9,6 +9,8 @@ export TERMINAL=wezterm
 
 export PATH=/home/vince/.local/share/zinit/polaris/bin:/home/vince/.sdkman/candidates/maven/current/bin:/home/vince/.sdkman/candidates/java/current/bin:/usr/bin/flutter/bin:/home/vince/.local/bin:/home/vince/.rvm/bin:/home/vince/.gvm/pkgsets/go1.22/global/bin:/home/vince/.gvm/gos/go1.22/bin:/home/vince/.gvm/pkgsets/go1.22/global/overlay/bin:/home/vince/.gvm/bin:/usr/bin/flutter/bin:/home/vince/.cargo/bin:/home/vince/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/local/bin/zig:/home/vince/.cargo/bin:/home/vince/.fzf/bin
 
+export PATH=$PATH:$(go env GOPATH)/bin
+
 # NVM
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
