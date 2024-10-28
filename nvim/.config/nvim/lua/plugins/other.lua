@@ -1,1 +1,3 @@
-return { "rgroli/other.nvim" }
+return {
+    "rgroli/other.nvim"
+}
