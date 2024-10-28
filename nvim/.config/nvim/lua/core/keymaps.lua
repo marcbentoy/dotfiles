@@ -2,11 +2,15 @@ local map = require("utils.keymaps")
 
 vim.g.mapleader = " "
 
+-- File Tree
+map("n", "<leader>e", ":Neotree float focus<CR>", { desc = "Find current file in Nvim Tree" })
+map("n", "<leader>ew", ":Neotree close<CR>", { desc = "Find current file in Nvim Tree" })
+
 -- File
-map("n", "<leader>e", ":NvimTreeFindFile<CR>", { desc = "Find current file in Nvim Tree" })
 map("n", "<leader>wf", ":w<CR>", { desc = "Save file" })
 map("n", "<leader>w.", ":wa<CR>", { desc = "Save all files" })
 
+-- Soft line wrapping navigation
 vim.api.nvim_set_keymap("n", "j", "gj", { noremap = true })
 vim.api.nvim_set_keymap("n", "k", "gk", { noremap = true })
 
