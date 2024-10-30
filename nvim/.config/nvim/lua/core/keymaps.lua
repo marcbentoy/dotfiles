@@ -3,9 +3,10 @@ local map = require("utils.keymaps")
 vim.g.mapleader = " "
 
 -- File Tree
-map("n", "<leader>ee", ":Neotree left focus<CR>", { desc = "Find current file in Nvim Tree" })
-map("n", "<leader>ef", ":Neotree float dir=%:p:h:h reveal_file=%:p<CR>", { desc = "Find current file in Nvim Tree" })
-map("n", "<leader>ew", ":Neotree close<CR>", { desc = "Find current file in Nvim Tree" })
+map("n", "<leader>eo", ":Neotree left focus<CR>", { desc = "Open neo-tree" })
+map("n", "<leader>ep", ":Neotree left dir=. reveal_file=%:p<CR>", { desc = "Point current file in neo-tree" })
+map("n", "<leader>ef", ":Neotree float dir=. reveal_file=%:p<CR>", { desc = "Point current file in neo-tree in float" })
+map("n", "<leader>ew", ":Neotree close<CR>", { desc = "Close neo-tree" })
 
 -- File
 map("n", "<leader>wf", ":w<CR>", { desc = "Save file" })
