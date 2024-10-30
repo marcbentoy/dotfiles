@@ -5,7 +5,7 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 -- local dimmer = { brightness = 0.02 }
 
-config.font = wezterm.font("JetBrains Mono")
+config.font = wezterm.font("JetBrainsMonoNL Nerd Font Mono")
 config.font_size = 12
 
 config.window_decorations = "RESIZE"
