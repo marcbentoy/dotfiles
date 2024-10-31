@@ -1,7 +1,7 @@
 general.live_config_reload = true
 
 [window]
-opacity = 0.9
+opacity = 0.84
 dimensions = { columns = 64, lines = 80 }
 position = { x = 0, y = 0 }
 decorations = "None"
