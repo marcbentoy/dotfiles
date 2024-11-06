@@ -15,6 +15,8 @@ map("n", "<leader>w.", ":wa<CR>", { desc = "Save all files" })
 -- Soft line wrapping navigation
 vim.api.nvim_set_keymap("n", "j", "gj", { noremap = true })
 vim.api.nvim_set_keymap("n", "k", "gk", { noremap = true })
+vim.api.nvim_set_keymap("n", "0", "g0", { noremap = true })
+vim.api.nvim_set_keymap("n", "$", "g$", { noremap = true })
 
 -- fzf
 map("n", "<leader>ff", ":Files<CR>", { noremap = true, silent = true })
