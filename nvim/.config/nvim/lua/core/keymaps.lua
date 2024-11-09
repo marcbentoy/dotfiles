@@ -25,7 +25,7 @@ map("n", "<leader>fb", ":Buffers<CR>", { noremap = true, silent = true })
 -- Buffers
 map("n", "<leader>vq", ":%bd<CR>:q<CR>", { desc = "Close neovim" })
 map("n", "<leader>qq", ":bd<CR>", { desc = "Close buffer and window" })
-map("n", "<leader>[", "<C-o>", { desc = "jump back", noremap = true, silent = true })
+map("n", "<leader>[", "<C-o>zt", { desc = "jump back", noremap = true, silent = true })
 map("n", "<leader>]", "<C-i>", { desc = "jump forward", noremap = true, silent = true })
 
 -- Navigate to the next buffer
