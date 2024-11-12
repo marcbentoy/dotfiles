@@ -22,6 +22,9 @@ vim.api.nvim_set_keymap("n", "$", "g$", { noremap = true })
 map("n", "<leader>ff", ":Files<CR>", { noremap = true, silent = true })
 map("n", "<leader>fb", ":Buffers<CR>", { noremap = true, silent = true })
 
+-- lazygit-nvim
+map("n", "<leader>lg", "<cmd>LazyGit<cr>", { desc = "LazyGit" })
+
 -- Buffers
 map("n", "<leader>vq", ":%bd<CR>:q<CR>", { desc = "Close neovim" })
 map("n", "<leader>qq", ":bd<CR>", { desc = "Close buffer and window" })
