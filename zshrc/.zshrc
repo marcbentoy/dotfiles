@@ -7,6 +7,8 @@ fi
 
 export TERMINAL=wezterm
 
+ [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
+
 export PATH=/home/vince/.local/share/zinit/polaris/bin:/home/vince/.sdkman/candidates/maven/current/bin:/home/vince/.sdkman/candidates/java/current/bin:/usr/bin/flutter/bin:/home/vince/.local/bin:/home/vince/.rvm/bin:/home/vince/.gvm/pkgsets/go1.22/global/bin:/home/vince/.gvm/gos/go1.22/bin:/home/vince/.gvm/pkgsets/go1.22/global/overlay/bin:/home/vince/.gvm/bin:/usr/bin/flutter/bin:/home/vince/.cargo/bin:/home/vince/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/local/bin/zig:/home/vince/.cargo/bin:/home/vince/.fzf/bin:usr/local/go/bin
 
 # NVM
@@ -74,6 +76,13 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 
+# Shell integrations
+eval "$(fzf --zsh)"
+eval "$(zoxide init zsh)"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 # Aliases
 # alias ls='ls --color'
 alias vim='nvim'
@@ -84,14 +93,6 @@ alias ta='tmux a -t'
 alias tk='tmux kill-ses -t'
 alias tls='tmux ls'
 alias wzrnmt='wezterm cli set-tab-title --tab-id'
-alias cd='z'
-
-# Shell integrations
-eval "$(fzf --zsh)"
-eval "$(zoxide init zsh)"
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # pnpm
 export PNPM_HOME="/home/vince/.local/share/pnpm"
@@ -100,9 +101,6 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
-
-# GVM
-[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
 
 # shiori
 export PATH=$PATH:/home/vince/Downloads/shiori/
