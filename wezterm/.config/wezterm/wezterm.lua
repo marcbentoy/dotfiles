@@ -9,7 +9,7 @@ config.font = wezterm.font("JetBrainsMonoNL Nerd Font Mono")
 config.font_size = 12
 
 config.window_decorations = "RESIZE"
-config.enable_tab_bar = false
+config.enable_tab_bar = true
 
 config.window_padding = {
     left = 0,
@@ -31,16 +31,16 @@ config.keys = {
         key = "x",
         action = wezterm.action.CloseCurrentPane({ confirm = true }),
     },
-    -- {
-    -- 	mods = "ALT|SHIFT",
-    -- 	key = "h",
-    -- 	action = wezterm.action.ActivateTabRelative(-1),
-    -- },
-    -- {
-    -- 	mods = "ALT|SHIFT",
-    -- 	key = "l",
-    -- 	action = wezterm.action.ActivateTabRelative(1),
-    -- },
+    {
+    	mods = "ALT|SHIFT",
+    	key = "h",
+    	action = wezterm.action.ActivateTabRelative(-1),
+    },
+    {
+    	mods = "ALT|SHIFT",
+    	key = "l",
+    	action = wezterm.action.ActivateTabRelative(1),
+    },
     {
         mods = "ALT",
         key = "\\",
@@ -51,26 +51,26 @@ config.keys = {
         key = "-",
         action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
     },
-    -- {
-    --     mods = "ALT",
-    --     key = "h",
-    --     action = wezterm.action.ActivatePaneDirection("Left"),
-    -- },
-    -- {
-    --     mods = "ALT",
-    --     key = "j",
-    --     action = wezterm.action.ActivatePaneDirection("Down"),
-    -- },
-    -- {
-    --     mods = "ALT",
-    --     key = "k",
-    --     action = wezterm.action.ActivatePaneDirection("Up"),
-    -- },
-    -- {
-    --     mods = "ALT",
-    --     key = "l",
-    --     action = wezterm.action.ActivatePaneDirection("Right"),
-    -- },
+    {
+        mods = "ALT",
+        key = "h",
+        action = wezterm.action.ActivatePaneDirection("Left"),
+    },
+    {
+        mods = "ALT",
+        key = "j",
+        action = wezterm.action.ActivatePaneDirection("Down"),
+    },
+    {
+        mods = "ALT",
+        key = "k",
+        action = wezterm.action.ActivatePaneDirection("Up"),
+    },
+    {
+        mods = "ALT",
+        key = "l",
+        action = wezterm.action.ActivatePaneDirection("Right"),
+    },
     {
         mods = "ALT",
         key = "LeftArrow",
@@ -98,7 +98,7 @@ config.keys = {
     },
 }
 
-config.window_background_opacity = 0.8
+config.window_background_opacity = 0.9
 
 -- config.background = {
 -- 	{
