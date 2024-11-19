@@ -279,6 +279,11 @@ https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.m
             },
         })
 
+        lspconfig["templ"].setup({
+            on_attach = on_attach,
+            capabilities = capabilities,
+        }) 
+
         -- Add buf-language-server (bufls) setup for Protobuf files
         lspconfig["buf_ls"].setup({
             cmd = { "buf_ls", "serve" },                            -- The 'bufls' command you installed
