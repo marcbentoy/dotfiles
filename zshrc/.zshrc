@@ -6,8 +6,14 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 export TERMINAL=wezterm
+export EDITOR=nvim
 
 eval "$(starship init zsh)"
+
+# jujutsu
+autoload -U compinit
+compinit
+source <(jj util completion zsh)
 
 export PATH=/home/vince/.local/share/zinit/polaris/bin:/home/vince/.sdkman/candidates/maven/current/bin:/home/vince/.sdkman/candidates/java/current/bin:/usr/bin/flutter/bin:/home/vince/.local/bin:/home/vince/.rvm/bin:/home/vince/.gvm/pkgsets/go1.22/global/bin:/home/vince/.gvm/gos/go1.22/bin:/home/vince/.gvm/pkgsets/go1.22/global/overlay/bin:/home/vince/.gvm/bin:/usr/bin/flutter/bin:/home/vince/.cargo/bin:/home/vince/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/local/bin/zig:/home/vince/.cargo/bin:/home/vince/.fzf/bin:usr/local/go/bin
 
