@@ -21,6 +21,7 @@ vim.api.nvim_set_keymap("n", "$", "g$", { noremap = true })
 -- fzf
 map("n", "<leader>ff", ":Files<CR>", { noremap = true, silent = true })
 map("n", "<leader>fb", ":Buffers<CR>", { noremap = true, silent = true })
+map('n', '<leader>fg', ':Rg<Space>', { noremap = true, silent = true })
 
 -- lazygit-nvim
 map("n", "<leader>lg", "<cmd>LazyGit<cr>", { desc = "LazyGit" })
@@ -32,10 +33,10 @@ map("n", "<leader>[", "<C-o>zz", { desc = "jump back", noremap = true, silent = 
 map("n", "<leader>]", "<C-i>", { desc = "jump forward", noremap = true, silent = true })
 
 -- Navigate to the next buffer
-map("n", "<A-l>", ":BufferLineCycleNext<CR>", { noremap = true, silent = true })
+map("n", "<Tab>", ":BufferLineCycleNext<CR>", { noremap = true, silent = true })
 
 -- Navigate to the previous buffer
-map("n", "<A-h>", ":BufferLineCyclePrev<CR>", { noremap = true, silent = true })
+map("n", "<S-Tab>", ":BufferLineCyclePrev<CR>", { noremap = true, silent = true })
 
 -- Map the function to a key (e.g., <leader>c)
 vim.api.nvim_set_keymap("n", "<leader>x", ":lua CloseCurrentBuffer()<CR>", { noremap = true, silent = true })
@@ -83,7 +84,7 @@ map("n", "<leader>tn", ":tabn<CR>")
 map("n", "<leader>tp", ":tabp<CR>")
 
 -- Copy+paste from/to system clip board
-map("v", "<leader>y", '"+y')
+map("v", "<leader>y", '"+y', { noremap = true, desc = "Yank to system clipboard" })
 map("n", "<leader>y", '"+y')
 map("n", "<leader>Y", '"+yg_')
 map("n", "<leader>p", '"+p')
