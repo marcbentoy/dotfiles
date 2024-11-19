@@ -99,7 +99,6 @@ alias ta='tmux a -t'
 alias tk='tmux kill-ses -t'
 alias tls='tmux ls'
 alias wzrnmt='wezterm cli set-tab-title --tab-id'
-alias cd='z'
 
 # pnpm
 export PNPM_HOME="/home/vince/.local/share/pnpm"
