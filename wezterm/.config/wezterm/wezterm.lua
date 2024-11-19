@@ -97,7 +97,7 @@ config.keys = {
     },
 }
 
-config.window_background_opacity = 0.9
+config.window_background_opacity = 0.84
 
 -- config.background = {
 -- 	{
