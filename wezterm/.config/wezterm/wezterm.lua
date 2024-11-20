@@ -7,6 +7,11 @@ local config = wezterm.config_builder()
 config.font = wezterm.font("JetBrainsMonoNL Nerd Font Mono")
 config.font_size = 12
 
+config.inactive_pane_hsb = {
+    saturation = 0.2,
+    brightness = 0.2
+}
+
 config.window_decorations = "RESIZE"
 config.enable_tab_bar = true
 
