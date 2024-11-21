@@ -25,6 +25,14 @@ config.window_padding = {
 -- tmux
 config.leader = { key = "a", mods = "ALT", timeout_milliseconds = 2000 }
 config.keys = {
+    -- pane select
+    {
+        mods = "LEADER",
+        key = "s",
+        action = wezterm.action.PaneSelect {
+            mode = 'SwapWithActive'
+        },
+    },
     {
         mods = "ALT",
         key = "c",
