@@ -7,7 +7,7 @@ local config = wezterm.config_builder()
 config.font = wezterm.font("JetBrainsMonoNL Nerd Font Mono")
 config.font_size = 14
 
-config.macos_window_background_blur = 12
+config.macos_window_background_blur = 24
 
 config.inactive_pane_hsb = {
     saturation = 0.2,
@@ -25,7 +25,7 @@ config.window_padding = {
 }
 
 -- tmux
-config.leader = { key = "a", mods = "ALT", timeout_milliseconds = 2000 }
+config.leader = { key = "a", mods = "CMD", timeout_milliseconds = 2000 }
 config.keys = {
     -- pane select
     {
@@ -36,24 +36,45 @@ config.keys = {
         },
     },
     {
+        mods = "CMD",
+        key = "n",
+        action = wezterm.action.SpawnTab("CurrentPaneDomain"),
+    },
+    {
+        mods = "CMD",
+        key = "w",
+        action = wezterm.action.CloseCurrentPane({ confirm = true }),
+    },
+    {
         mods = "ALT",
-        key = "c",
+        key = "n",
         action = wezterm.action.SpawnTab("CurrentPaneDomain"),
     },
     {
         mods = "ALT",
-        key = "x",
+        key = "w",
         action = wezterm.action.CloseCurrentPane({ confirm = true }),
     },
     {
-    	mods = "ALT|SHIFT",
-    	key = "h",
-    	action = wezterm.action.ActivateTabRelative(-1),
+        mods = "CMD|SHIFT",
+        key = "h",
+        action = wezterm.action.ActivateTabRelative(-1),
     },
     {
-    	mods = "ALT|SHIFT",
-    	key = "l",
-    	action = wezterm.action.ActivateTabRelative(1),
+        mods = "CMD|SHIFT",
+        key = "l",
+        action = wezterm.action.ActivateTabRelative(1),
+    },
+
+    {
+        mods = "CMD",
+        key = "\\",
+        action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
+    },
+    {
+        mods = "CMD",
+        key = "-",
+        action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
     },
     {
         mods = "ALT",
@@ -65,6 +86,29 @@ config.keys = {
         key = "-",
         action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
     },
+
+    -- for mac specific keys
+    {
+        mods = "CMD",
+        key = "h",
+        action = wezterm.action.ActivatePaneDirection("Left"),
+    },
+    {
+        mods = "CMD",
+        key = "j",
+        action = wezterm.action.ActivatePaneDirection("Down"),
+    },
+    {
+        mods = "CMD",
+        key = "k",
+        action = wezterm.action.ActivatePaneDirection("Up"),
+    },
+    {
+        mods = "CMD",
+        key = "l",
+        action = wezterm.action.ActivatePaneDirection("Right"),
+    },
+
     {
         mods = "ALT",
         key = "h",
@@ -84,6 +128,27 @@ config.keys = {
         mods = "ALT",
         key = "l",
         action = wezterm.action.ActivatePaneDirection("Right"),
+    },
+
+    {
+        mods = "CMD",
+        key = "LeftArrow",
+        action = wezterm.action.AdjustPaneSize({ "Left", 3 }),
+    },
+    {
+        mods = "CMD",
+        key = "RightArrow",
+        action = wezterm.action.AdjustPaneSize({ "Right", 3 }),
+    },
+    {
+        mods = "CMD",
+        key = "DownArrow",
+        action = wezterm.action.AdjustPaneSize({ "Down", 3 }),
+    },
+    {
+        mods = "CMD",
+        key = "UpArrow",
+        action = wezterm.action.AdjustPaneSize({ "Up", 3 }),
     },
     {
         mods = "ALT",
@@ -112,7 +177,7 @@ config.keys = {
     },
 }
 
-config.window_background_opacity = 0.84
+config.window_background_opacity = 0.8
 
 -- config.background = {
 -- 	{
