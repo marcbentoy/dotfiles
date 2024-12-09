@@ -4,8 +4,8 @@ local wezterm = require("wezterm")
 -- This will hold the configuration
 local config = wezterm.config_builder()
 
-config.font = wezterm.font("JetBrainsMonoNL Nerd Font Mono")
-config.font_size = 14
+config.font = wezterm.font("JetBrains Mono Nerd Font")
+config.font_size = 12
 
 config.macos_window_background_blur = 24
 
@@ -35,16 +35,19 @@ config.keys = {
             mode = 'SwapWithActive'
         },
     },
+
     {
-        mods = "CMD",
+        mods = "SUPER",
         key = "n",
         action = wezterm.action.SpawnTab("CurrentPaneDomain"),
     },
+
     {
         mods = "CMD",
         key = "w",
         action = wezterm.action.CloseCurrentPane({ confirm = true }),
     },
+
     {
         mods = "ALT",
         key = "n",
