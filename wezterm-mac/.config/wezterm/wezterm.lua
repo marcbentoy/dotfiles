@@ -4,8 +4,8 @@ local wezterm = require("wezterm")
 -- This will hold the configuration
 local config = wezterm.config_builder()
 
-config.font = wezterm.font("JetBrains Mono Nerd Font")
-config.font_size = 12
+config.font = wezterm.font("JetBrainsMono Nerd Font Mono")
+config.font_size = 16
 
 config.macos_window_background_blur = 24
 
