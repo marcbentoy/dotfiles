@@ -59,12 +59,12 @@ config.keys = {
         action = wezterm.action.CloseCurrentPane({ confirm = true }),
     },
     {
-        mods = "CMD|SHIFT",
+        mods = "ALT|SHIFT",
         key = "h",
         action = wezterm.action.ActivateTabRelative(-1),
     },
     {
-        mods = "CMD|SHIFT",
+        mods = "ALT|SHIFT",
         key = "l",
         action = wezterm.action.ActivateTabRelative(1),
     },
