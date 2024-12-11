@@ -58,6 +58,18 @@ config.keys = {
         key = "w",
         action = wezterm.action.CloseCurrentPane({ confirm = true }),
     },
+
+    {
+        mods = "SUPER|SHIFT",
+        key = "h",
+        action = wezterm.action.ActivateTabRelative(-1),
+    },
+    {
+        mods = "SUPER|SHIFT",
+        key = "l",
+        action = wezterm.action.ActivateTabRelative(1),
+    },
+
     {
         mods = "ALT|SHIFT",
         key = "h",
