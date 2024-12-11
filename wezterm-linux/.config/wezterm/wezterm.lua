@@ -41,7 +41,11 @@ config.keys = {
         key = "n",
         action = wezterm.action.SpawnTab("CurrentPaneDomain"),
     },
-
+    {
+        mods = "SUPER",
+        key = "w",
+        action = wezterm.action.CloseCurrentPane({ confirm = true }),
+    },
     {
         mods = "ALT",
         key = "n",
