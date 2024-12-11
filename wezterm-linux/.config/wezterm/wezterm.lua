@@ -43,12 +43,6 @@ config.keys = {
     },
 
     {
-        mods = "CMD",
-        key = "w",
-        action = wezterm.action.CloseCurrentPane({ confirm = true }),
-    },
-
-    {
         mods = "ALT",
         key = "n",
         action = wezterm.action.SpawnTab("CurrentPaneDomain"),
@@ -82,12 +76,12 @@ config.keys = {
     },
 
     {
-        mods = "CMD",
+        mods = "SUPER",
         key = "\\",
         action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
     },
     {
-        mods = "CMD",
+        mods = "SUPER",
         key = "-",
         action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
     },
@@ -102,24 +96,23 @@ config.keys = {
         action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
     },
 
-    -- for mac specific keys
     {
-        mods = "CMD",
+        mods = "SUPER",
         key = "h",
         action = wezterm.action.ActivatePaneDirection("Left"),
     },
     {
-        mods = "CMD",
+        mods = "SUPER",
         key = "j",
         action = wezterm.action.ActivatePaneDirection("Down"),
     },
     {
-        mods = "CMD",
+        mods = "SUPER",
         key = "k",
         action = wezterm.action.ActivatePaneDirection("Up"),
     },
     {
-        mods = "CMD",
+        mods = "SUPER",
         key = "l",
         action = wezterm.action.ActivatePaneDirection("Right"),
     },
@@ -146,22 +139,22 @@ config.keys = {
     },
 
     {
-        mods = "CMD",
+        mods = "SUPER",
         key = "LeftArrow",
         action = wezterm.action.AdjustPaneSize({ "Left", 3 }),
     },
     {
-        mods = "CMD",
+        mods = "SUPER",
         key = "RightArrow",
         action = wezterm.action.AdjustPaneSize({ "Right", 3 }),
     },
     {
-        mods = "CMD",
+        mods = "SUPER",
         key = "DownArrow",
         action = wezterm.action.AdjustPaneSize({ "Down", 3 }),
     },
     {
-        mods = "CMD",
+        mods = "SUPER",
         key = "UpArrow",
         action = wezterm.action.AdjustPaneSize({ "Up", 3 }),
     },
@@ -193,18 +186,6 @@ config.keys = {
 }
 
 config.window_background_opacity = 0.8
-
--- config.background = {
--- 	{
--- 		source = {
--- 			File = "/home/vince/.config/wallpapers/wallpaper.png",
--- 		},
--- 		hsb = dimmer,
--- 		width = "100%",
--- 		height = "100%",
--- 		opacity = 1,
--- 	},
--- }
 
 for i = 0, 9 do
     -- leader + number to activate that tab
