@@ -1,6 +1,8 @@
 local g = vim.g
 local opt = vim.opt
 
+vim.opt.hidden = true
+
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
@@ -107,3 +109,11 @@ local disabled_built_ins = {
 for _, plugin in pairs(disabled_built_ins) do
     g["loaded_" .. plugin] = 1
 end
+
+vim.api.nvim_create_autocmd("BufDelete", {
+  callback = function()
+    if #vim.fn.getbufinfo({ buflisted = 1 }) == 0 then
+      vim.cmd("enew") -- Create a new empty buffer
+    end
+  end,
+})

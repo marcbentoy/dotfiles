@@ -20,15 +20,16 @@ vim.api.nvim_set_keymap("n", "$", "g$", { noremap = true })
 
 -- fzf
 map("n", "<leader>ff", ":Files<CR>", { noremap = true, silent = true })
-map("n", "<leader>fb", ":Buffers<CR>", { noremap = true, silent = true })
+map("n", "<leader>fb", ":Telescope buffers<CR>", { noremap = true, silent = true })
 map('n', '<leader>fg', ':Rg<Space>', { noremap = true, silent = true })
 
 -- lazygit-nvim
 map("n", "<leader>lg", "<cmd>LazyGit<cr>", { desc = "LazyGit" })
 
 -- Buffers
+map("n", "<leader>bx", ":lua safe_bdelete()<CR>", { noremap = true, silent = true})
 map("n", "<leader>vq", ":%bd<CR>:q<CR>", { desc = "Close neovim" })
-map("n", "<leader>qq", ":bd<CR>", { desc = "Close buffer and window" })
+-- map("n", "<leader>qq", ":bd<CR>", { desc = "Close buffer and window" })
 map("n", "<leader>[", "<C-o>zz", { desc = "jump back", noremap = true, silent = true })
 map("n", "<leader>]", "<C-i>", { desc = "jump forward", noremap = true, silent = true })
 
@@ -124,3 +125,5 @@ vim.api.nvim_create_user_command("Format", function(args)
     end
     require("conform").format({ async = true, lsp_fallback = true, range = range })
 end, { range = true })
+
+

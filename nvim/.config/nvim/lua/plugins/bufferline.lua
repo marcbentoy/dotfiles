@@ -5,9 +5,9 @@ return {
     config = function()
         local buff = require("bufferline")
         buff.setup({
-            options = {
-                offsets = { { filetype = "NvimTree", text = "Files", text_align = "left" } },
-            },
+            -- options = {
+            --     offsets = { { filetype = "", text = "Files", text_align = "left" } },
+            -- },
         })
     end,
 }
