@@ -8,6 +8,13 @@ map("n", "<leader>ep", ":Neotree left dir=. reveal_file=%:p<CR>", { desc = "Poin
 map("n", "<leader>ef", ":Neotree float dir=. reveal_file=%:p<CR>", { desc = "Point current file in neo-tree in float" })
 map("n", "<leader>ew", ":Neotree close<CR>", { desc = "Close neo-tree" })
 
+-- obsidian-nvim
+map("n", "<leader>od", ":ObsidianToday<CR>", { desc = "Open obsidian daily journal" })
+map("n", "<leader>op", ":ObsidianPasteImg<CR>", { desc = "Paste last copied image" })
+map("n", "<leader>o[", ":ObsidianYesterday<CR>", { desc = "Go to previous journal" })
+map("n", "<leader>o]", ":ObsidianTomorrow<CR>", { desc = "Go to next journal" })
+map("n", "<leader>on", ":ObsidianNew<CR>", { desc = "Go to next journal" })
+
 -- File
 map("n", "<leader>wf", ":w<CR>", { desc = "Save file" })
 map("n", "<leader>w.", ":wa<CR>", { desc = "Save all files" })
