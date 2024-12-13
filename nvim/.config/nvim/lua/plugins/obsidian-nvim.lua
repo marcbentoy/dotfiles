@@ -49,17 +49,5 @@ return {
             end,
             opts = { buffer = true, expr = true },
         },
-        ["<leader>od"] = {
-            action = function()
-                return require("obsidian").util.today()
-            end,
-            opts = { noremap = true, silent = true },
-        },
-        ["<leader>pi"] = {
-            action = function()
-                return require("obsidian").util.paste_img()
-            end,
-            opts = { noremap = true, silent = true },
-        }
     },
 }
