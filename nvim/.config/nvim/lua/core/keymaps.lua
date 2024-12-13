@@ -9,11 +9,13 @@ map("n", "<leader>ef", ":Neotree float dir=. reveal_file=%:p<CR>", { desc = "Poi
 map("n", "<leader>ew", ":Neotree close<CR>", { desc = "Close neo-tree" })
 
 -- obsidian-nvim
-map("n", "<leader>od", ":ObsidianToday<CR>", { desc = "Open obsidian daily journal" })
-map("n", "<leader>op", ":ObsidianPasteImg<CR>", { desc = "Paste last copied image" })
-map("n", "<leader>o[", ":ObsidianYesterday<CR>", { desc = "Go to previous journal" })
-map("n", "<leader>o]", ":ObsidianTomorrow<CR>", { desc = "Go to next journal" })
-map("n", "<leader>on", ":ObsidianNew<CR>", { desc = "Go to next journal" })
+map("n", "<leader>obd", ":ObsidianToday<CR>", { desc = "Open obsidian daily journal" })
+map("n", "<leader>obp", ":ObsidianPasteImg<CR>", { desc = "Paste last copied image" })
+map("n", "<leader>ob[", ":ObsidianYesterday<CR>", { desc = "Go to previous journal" })
+map("n", "<leader>ob]", ":ObsidianTomorrow<CR>", { desc = "Go to next journal" })
+map("n", "<leader>obn", ":ObsidianNew<CR>", { desc = "Go to next journal" })
+map("n", "<leader>obs", ":ObsidianSearch<CR>", { desc = "Search keywords inside obsidian workspace" })
+map("n", "<leader>obq", ":ObsidianQuickSwitch<CR>", { desc = "Search files inside obsidian workspace" })
 
 -- File
 map("n", "<leader>wf", ":w<CR>", { desc = "Save file" })
