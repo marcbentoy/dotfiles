@@ -83,6 +83,8 @@ alias tls='tmux ls'
 alias wzrnmt='wezterm cli set-tab-title --tab-id'
 alias cd='z'
 alias fk='fuck'
+alias ob='cd secondbrain; vim .'
+
 # pnpm
 export PNPM_HOME="/home/vince/.local/share/pnpm"
 case ":$PATH:" in
