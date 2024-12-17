@@ -38,6 +38,19 @@ config.keys = {
 
     {
         mods = "SUPER",
+        key = "r",
+        action = wezterm.action.PromptInputLine {
+            description = "Rename current tab",
+            action = wezterm.action_callback(function(window, pane, line)
+                if line then
+                    window:active_tab():set_title(line)
+                end
+            end)        
+        }
+    },
+
+    {
+        mods = "SUPER",
         key = "n",
         action = wezterm.action.SpawnTab("CurrentPaneDomain"),
     },
