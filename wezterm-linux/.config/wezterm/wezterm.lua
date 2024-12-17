@@ -25,7 +25,7 @@ config.window_padding = {
 }
 
 -- tmux
-config.leader = { key = "a", mods = "CMD", timeout_milliseconds = 2000 }
+config.leader = { key = " ", mods = "CTRL", timeout_milliseconds = 2000 }
 config.keys = {
     -- pane select
     {
