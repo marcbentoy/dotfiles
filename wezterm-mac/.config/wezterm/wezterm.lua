@@ -25,7 +25,7 @@ config.window_padding = {
 }
 
 -- tmux
-config.leader = { key = "a", mods = "CMD", timeout_milliseconds = 2000 }
+config.leader = { key = " ", mods = "CTRL", timeout_milliseconds = 2000 }
 config.keys = {
     -- pane select
     {
@@ -34,6 +34,19 @@ config.keys = {
         action = wezterm.action.PaneSelect {
             mode = 'SwapWithActive'
         },
+    },
+
+    {
+        mods = "LEADER",
+        key = "r",
+        action = wezterm.action.PromptInputLine {
+            description = "Rename current tab",
+            action = wezterm.action_callback(function(window, _, line)
+                if line then
+                    window:active_tab():set_title(line)
+                end
+            end)
+        }
     },
 
     {
