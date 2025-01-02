@@ -11,6 +11,7 @@ keybind = ctrl+space>l=goto_split:right
 keybind = ctrl+space>\=new_split:right
 keybind = ctrl+space>-=new_split:down
 keybind = ctrl+space>z=toggle_split_zoom
+keybind = super+w=close_surface
 
 # tab keybindings
 keybind = cmd+shift+l=next_tab
