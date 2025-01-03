@@ -84,6 +84,7 @@ alias wzrnmt='wezterm cli set-tab-title --tab-id'
 alias cd='z'
 alias fk='fuck'
 alias ob='cd secondbrain; vim .'
+alias zap='zathura'
 
 # pnpm
 export PNPM_HOME="/home/vince/.local/share/pnpm"
