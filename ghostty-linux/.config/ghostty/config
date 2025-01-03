@@ -1,5 +1,5 @@
 theme = ayu
-font-size = 14
+font-size = 12
 cursor-style = block
 cursor-style-blink = false
 
@@ -18,3 +18,4 @@ keybind = cmd+shift+l=next_tab
 keybind = cmd+shift+h=previous_tab
 keybind = control+space>comma=move_tab:-1
 keybind = control+space>period=move_tab:1
+keybind = super+t=new_tab
