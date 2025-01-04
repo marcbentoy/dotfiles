@@ -17,6 +17,8 @@ map("n", "<leader>obn", ":ObsidianNew<CR>", { desc = "Go to next journal" })
 map("n", "<leader>obs", ":ObsidianSearch<CR>", { desc = "Search keywords inside obsidian workspace" })
 map("n", "<leader>obq", ":ObsidianQuickSwitch<CR>", { desc = "Search files inside obsidian workspace" })
 
+map("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition", noremap = true, silent = true })
+
 -- File
 map("n", "<leader>wf", ":w<CR>", { desc = "Save file" })
 map("n", "<leader>w.", ":wa<CR>", { desc = "Save all files" })
@@ -36,7 +38,7 @@ map('n', '<leader>fg', ':Rg<Space>', { noremap = true, silent = true })
 map("n", "<leader>lg", "<cmd>LazyGit<cr>", { desc = "LazyGit" })
 
 -- Buffers
-map("n", "<leader>bx", ":lua safe_bdelete()<CR>", { noremap = true, silent = true})
+map("n", "<leader>bx", ":lua safe_bdelete()<CR>", { noremap = true, silent = true })
 map("n", "<leader>vq", ":%bd<CR>:q<CR>", { desc = "Close neovim" })
 -- map("n", "<leader>qq", ":bd<CR>", { desc = "Close buffer and window" })
 map("n", "<leader>[", "<C-o>zz", { desc = "jump back", noremap = true, silent = true })
@@ -134,5 +136,3 @@ vim.api.nvim_create_user_command("Format", function(args)
     end
     require("conform").format({ async = true, lsp_fallback = true, range = range })
 end, { range = true })
-
-

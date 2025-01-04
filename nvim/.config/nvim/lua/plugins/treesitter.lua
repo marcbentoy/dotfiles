@@ -26,6 +26,7 @@ return {
                 "cpp",
                 "c_sharp",
                 "css",
+                "dart",
                 "html",
                 "markdown",
                 "markdown_inline",

@@ -283,17 +283,27 @@ https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.m
             on_attach = on_attach,
             capabilities = capabilities,
             filetypes = { "html", "templ" },
-        }) 
+        })
 
         -- Add buf-language-server (bufls) setup for Protobuf files
         lspconfig["buf_ls"].setup({
-            cmd = { "buf_ls", "serve" },                            -- The 'bufls' command you installed
+            cmd = { "buf_ls", "serve" },                           -- The 'bufls' command you installed
             filetypes = { "proto" },                               -- Enable this LSP only for proto files
             on_attach = on_attach,                                 -- Reuse the existing `on_attach` function
             root_dir = util.root_pattern("buf.work.yaml", ".git"), -- Define the root of the project
             capabilities = capabilities,                           -- Reuse the existing LSP capabilities
             settings = {}
         })
+
+        lspconfig.dartls.setup {
+            on_attach = function(client, bufnr)
+                local bufopts = { noremap = true, silent = true, buffer = bufnr }
+                vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
+                vim.keymap.set('n', 'K', vim.lsp.buf.hover, bufopts)
+                vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, bufopts)
+            end,
+            capabilities = require('cmp_nvim_lsp').default_capabilities(),
+        }
 
         -- lspconfig["omnisharp"].setup({
         -- on_attach = on_attach,
