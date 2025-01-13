@@ -2,6 +2,9 @@ local map = require("utils.keymaps")
 
 vim.g.mapleader = " "
 
+local bufopts = { noremap = true, silent = true }
+vim.keymap.set('n', '<leader>da', ":lua vim.diagnostic.open_float()<CR>", bufopts)
+
 -- File Tree
 map("n", "<leader>eo", ":Neotree left focus<CR>", { desc = "Open neo-tree" })
 map("n", "<leader>ep", ":Neotree left dir=. reveal_file=%:p<CR>", { desc = "Point current file in neo-tree" })
@@ -10,6 +13,7 @@ map("n", "<leader>ew", ":Neotree close<CR>", { desc = "Close neo-tree" })
 
 -- obsidian-nvim
 map("n", "<leader>obd", ":ObsidianToday<CR>", { desc = "Open obsidian daily journal" })
+map("n", "<leader>oby", ":ObsidianYesterday<CR>", { desc = "Open obsidian daily journal" })
 map("n", "<leader>obp", ":ObsidianPasteImg<CR>", { desc = "Paste last copied image" })
 map("n", "<leader>ob[", ":ObsidianYesterday<CR>", { desc = "Go to previous journal" })
 map("n", "<leader>ob]", ":ObsidianTomorrow<CR>", { desc = "Go to next journal" })
