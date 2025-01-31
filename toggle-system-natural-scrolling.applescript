@@ -24,10 +24,10 @@ if macVersion is greater than or equal to "14" then
 	
 	if isNaturalScrolling is "1" then
 		do shell script "defaults -currentHost write NSGlobalDomain com.apple.swipescrolldirection -bool false"
-        log("Natural scrolling = ON ✅")
+        log("Natural scrolling = OFF ☑️")
 	else
 		do shell script "defaults -currentHost write NSGlobalDomain com.apple.swipescrolldirection -bool true"
-        log("Natural scrolling = OFF ☑️")
+        log("Natural scrolling = ON ✅")
 	end if
 	
 	do shell script "/System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u"
