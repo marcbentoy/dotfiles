@@ -23,4 +23,4 @@ keybind = control+space>comma=move_tab:-1
 keybind = control+space>period=move_tab:1
 
 # quick terminal 
-keybind = global:cmd+grave_accent=toggle_quick_terminal
+keybind = global:cmd+shift+control+grave_accent=toggle_quick_terminal
