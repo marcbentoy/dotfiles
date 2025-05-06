@@ -1,0 +1,42 @@
+@baseUrl = http://localhost:8085/v1
+@project = test-project
+@topic = ConnectEvents
+@subscription = milestone-api_MilestoneJob
+
+### Get Topics
+GET {{baseUrl}}/projects/{{project}}/topics
+
+
+### Get Subscriptions
+GET {{baseUrl}}/projects/{{project}}/subscriptions
+
+
+### Put Topic
+PUT {{baseUrl}}/projects/{{project}}/topics/{{topic}}
+Content-Type: application/json
+
+
+### Put Topic Subscription
+PUT {{baseUrl}}/projects/{{project}}/subscriptions/{{subscription}}
+Content-Type: application/json
+
+{
+  "topic": "projects/{{project}}/topics/{{topic}}"
+}
+
+
+### Publish Event
+POST {{baseUrl}}/projects/{{project}}/topics/{{topic}}:publish
+Content-Type: application/json
+
+{
+  "messages": [
+    {
+      "data": "",
+      "attributes": {
+        "message_type": "PullRequestSearchCommand"
+      }
+    }
+  ]
+}
+
