@@ -16,6 +16,7 @@ nmap <leader>l :action NextTab<CR>
 " Usage
 map <leader>ug <Action>(FindUsages)
 map <leader>oo <Action>(FileStructurePopup)
+map <leader>uu <Action>(ShowUsages)
 
 
 "" -- Suggested options --
