@@ -8,10 +8,11 @@ keybind = alt+k=goto_split:top
 keybind = alt+j=goto_split:bottom
 keybind = alt+h=goto_split:left
 keybind = alt+l=goto_split:right
-keybind = alt+left=resize_split:left,12
-keybind = alt+down=resize_split:down,12
-keybind = alt+up=resize_split:up,12
-keybind = alt+right=resize_split:right,12
+keybind = alt+left=resize_split:left,24
+keybind = alt+down=resize_split:down,24
+keybind = alt+up=resize_split:up,24
+keybind = alt+right=resize_split:right,24
+keybind = cmd+z=toggle_split_zoom
 
 # tab keybindings
 #keybind = control+space>comma=move_tab:-1
