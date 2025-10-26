@@ -61,9 +61,11 @@ let g:NERDTreeMapJumpParent='h'
 inoremap jk <Esc>
 inoremap kj <Esc>
 
-vnoremap jk <Esc>
-vnoremap kj <Esc>
+" vnoremap jk <Esc>
+" vnoremap kj <Esc>
 
 " Reduce key sequence delay
 " set timeout
-" set timeoutlen=
+" set timeoutlen=300
+" set ttimeout
+" set ttimeoutlen=10
