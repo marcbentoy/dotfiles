@@ -2,6 +2,10 @@ local map = require("utils.keymaps")
 
 vim.g.mapleader = " "
 
+-- Fast escape using jk or kj
+vim.keymap.set('i', 'jk', '<Esc>')
+vim.keymap.set('i', 'kj', '<Esc>')
+
 local bufopts = { noremap = true, silent = true }
 vim.keymap.set('n', '<leader>da', ":lua vim.diagnostic.open_float()<CR>", bufopts)
 
@@ -113,6 +117,7 @@ map("x", "p", "P")
 
 -- Close all buffers
 map("n", "<leader>bda", ":%bd<CR>", { desc = "Close all buffers" })
+
 
 -- todo-comment plugin
 vim.keymap.set("n", "]t", function()
