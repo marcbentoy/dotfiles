@@ -56,3 +56,14 @@ set surround
 set NERDTree
 let g:NERDTreeMapActivateNode='l'
 let g:NERDTreeMapJumpParent='h'
+
+" Map 'jk' to escape in insert mode
+inoremap jk <Esc>
+inoremap kj <Esc>
+
+vnoremap jk <Esc>
+vnoremap kj <Esc>
+
+" Reduce key sequence delay
+" set timeout
+" set timeoutlen=
