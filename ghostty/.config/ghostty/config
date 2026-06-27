@@ -3,6 +3,13 @@ font-size = 14
 cursor-style = block
 cursor-style-blink = false
 
+macos-option-as-alt = left
+
+# Sets the background opacity (0.0 is fully transparent, 1.0 is fully opaque)
+background-opacity = 0.84
+# Adds a blur effect to the transparent background (macOS only)
+background-blur-radius = 20
+
 # split keybindings
 keybind = alt+k=goto_split:top
 keybind = alt+j=goto_split:bottom
