@@ -1,0 +1,7 @@
+[user]
+  name = Marc Bentoy
+  email = marcvincentbentoy@benifex.com
+
+[url "git@github.com-work:"]
+  insteadOf = https://github.com/
+

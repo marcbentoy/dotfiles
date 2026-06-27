@@ -1,0 +1,16 @@
+[user]
+  email = marcvincentbentoy@benifex.com
+  name = Marc Bentoy
+
+[core]
+  excludesfile = ~/.config/git/.gitignore
+  editor = nvim
+  autocrlf = input
+
+[includeIf "gitdir:~/bfx/"]
+  path = ~/.config/git/.gitconfig-work
+
+[includeIf "gitdir:~/"]
+  path = ~/.config/git/.gitconfig-personal
+[includeIf "gitdir:~/projects/"]
+  path = ~/.config/git/.gitconfig-personal
