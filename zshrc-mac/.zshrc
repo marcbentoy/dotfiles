@@ -158,7 +158,25 @@ export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 export PATH="$PATH":"/opt/homebrew/lib/ruby/gems/3.3.0/bin"
 export PATH="$PATH:$HOME/go/bin"
 
+# Testcontainers + colima (Docker socket isn't at /var/run/docker.sock)
+export TESTCONTAINERS_DOCKER_SOCKET_OVERRIDE="/var/run/docker.sock"
+export DOCKER_HOST="unix://${HOME}/.colima/default/docker.sock"
+export TESTCONTAINERS_HOST_OVERRIDE="$(colima ls -j | jq -r '.address')"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# Ensure ~/.testcontainers.properties is dynamically configured for the current user/home directory
+PROPERTIES_FILE="$HOME/.testcontainers.properties"
+DESIRED_CONTENT="docker.host=unix://${HOME}/.colima/default/docker.sock"
+
+# If it's currently a symlink from Stow, remove it to write the dynamic file instead
+if [ -L "$PROPERTIES_FILE" ]; then
+  rm "$PROPERTIES_FILE"
+fi
+
+# Write/update the file only if it doesn't match the desired content
+if [ ! -f "$PROPERTIES_FILE" ] || [ "$(cat "$PROPERTIES_FILE" 2>/dev/null)" != "$DESIRED_CONTENT" ]; then
+  echo "$DESIRED_CONTENT" > "$PROPERTIES_FILE"
+fi
